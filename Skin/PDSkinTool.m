@@ -45,12 +45,20 @@ static NSString *_color;
 #pragma mark - action: 根据主题取图片
 - (UIImage *)skinToolWithImageName:(NSString *)name
 {
+//    // 1.获取文件所在的位置
+//    NSString *imageName = [NSString stringWithFormat:@"skinColor/%@/%@", _color, name];
+//    // 2.获取plist的路径
+//    NSString *resourceBundle = [[NSBundle mainBundle] pathForResource:@"skin" ofType:@"bundle"];
+//    NSString *plistPath = [[NSBundle bundleWithPath:resourceBundle] pathForResource:imageName ofType:nil];
+////    return [UIImage imageNamed:imageName];
+//    UIImage *img = [UIImage imageWithContentsOfFile:plistPath];
+//    return img;
     // 1.获取文件所在的位置
     NSString *imageName = [NSString stringWithFormat:@"skinColor/%@/%@", _color, name];
     // 2.获取plist的路径
     NSString *resourceBundle = [[NSBundle mainBundle] pathForResource:@"skin" ofType:@"bundle"];
     NSString *plistPath = [[NSBundle bundleWithPath:resourceBundle] pathForResource:imageName ofType:nil];
-//    return [UIImage imageNamed:imageName];
+    //    return [UIImage imageNamed:imageName];
     UIImage *img = [UIImage imageWithContentsOfFile:plistPath];
     return img;
 
