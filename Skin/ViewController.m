@@ -19,7 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _total =0 ;
+    self.total =0 ;
     self.view.backgroundColor = [PDSkinColorTool skinToolBgColor];
     self.imageV = [[UIImageView alloc]initWithImage:[PDSkinColorTool skinToolWithImageName:@"image.png"]];
     self.imageV.center = self.view.center;
